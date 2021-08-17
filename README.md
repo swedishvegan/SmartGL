@@ -14,6 +14,7 @@ SmartGL is at its core two things: (1) a collection of object-oriented wrappers 
 - Easy interface for loading shaders and creating programs.
 - Classes that provide an easy interface for setting a program's uniforms and keeping them all bundled in one place. In particular, uniform buffers with an std140 layout can be updated automatically without the user having to perform meticulous alignment calculations. This one was truly a game-changer for me.
 - My own math library. You can think of it as a slightly worse, less extensive version of the popular GLM library. But it's single-header and still gets the job done. (If you want to have nightmares tonight, go look at the source code for "util/GL-math.hpp"!)
+
 The graphics engine is what I spent the bulk of my time on, and includes the following features:
 - Loading of models from pretty much any format.
 - Support for animated and PBR models.
@@ -29,3 +30,18 @@ Great question, my imaginary friend! Honestly, no reason -- you're most likely b
 > How can I learn more about the engine and how to use it?
 
 I want to add Doxygen comments to all my code eventually, but for now, there is no documentation. Your best bet is to look through the "demo.cpp" file and read the comments/ try to understand the code. It's pretty simple and probably covers most common use cases. If you have any additional pressing questions, you can email me (see top).
+> How would I go about including my library/ building the demo?
+
+Including the library is easy enough, but you'll need to also include all of its dependencies. This is hard, and you can expect to spend a couple days getting it up and running. See the bottom for a list of dependencies. Also note that SmartGL does not internally use any window system or OpenGL function loading library, so you'll have to provide libraries for these functions yourself (I use the combination GLEW/GLFW). 
+> Not that I care, but can you tell me a little bit about yourself?
+
+Well that's a little rude, but sure. At the time of writing this, I'm a 20 year old college student going into his junior year. I've been coding and making games as a hobby since middle school, and now I'm a math/CS major. Programming is probably the most important thing in my life at the moment. I spend most of my free time programming and it allows me to express myself on a level that I would never be able to in everyday life. This project of mine has become an important part of my identity and I've poured my heart into this engine for the last eight months. I'm posting it here in the hopes that someone may find it useful one day or at the very least appreciate the work that I've put into it. I also love playing guitar, listening to music, playing Rocket League, and hiking.
+
+> Okay that was honestly really sappy. Also, why are you having a conversation with an imaginary person? Don't you have a life?
+
+No comment.
+
+### List of dependencies:
+- The stb_image library (single-header).
+- Bullet physics (only required if physics models are used).
+- Assimp (required to convert models into SmartGL's custom format, but you can write a separate program to do this so that you don't need Assimp to build your main game's executable).
