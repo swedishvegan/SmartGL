@@ -9,7 +9,7 @@ link here
 ### About SmartGL
 > What the hell is this?
 
-SmartGL is at its core two things: (1) a collection of object-oriented wrappers around OpenGL objects designed to boost productivity and ease of programming while working with OpenGL, and (2) a graphics engine designed primarily with the goal of making video games. No one likes having to write acres of OpenGL API calls for the most simple tasks or carefully looking up OpenGL functions one at a time in the spec. My object-oriented wrappers were made to preserve all the fun and power of OpenGL programming while eliminating all the boring and tedious stuff. Some features include:
+SmartGL is at its core two things: (1) a collection of object-oriented wrappers around OpenGL objects designed to boost productivity and ease of programming while working with OpenGL, and (2) a graphics engine designed primarily with the goal of making video games. No one likes having to write acres of OpenGL API calls for the most simple tasks or carefully look up OpenGL functions one at a time in the spec. My object-oriented wrappers were made to preserve all the fun and power of OpenGL programming while eliminating all the boring and tedious stuff. Some features include:
 - Classes for every type of commonly used texture with support for (pretty much) every data type.
 - Easy interface for loading shaders and creating programs.
 - Classes that provide an easy interface for setting a program's uniforms and keeping them all bundled in one place. In particular, uniform buffers with an std140 layout can be updated automatically without the user having to perform meticulous alignment calculations. This one was truly a game-changer for me.
