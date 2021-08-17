@@ -1,2 +1,28 @@
 # SmartGL
 OpenGL made easy.
+
+#### Demo video:
+link here
+#### For an example of how my engine is used, please read through the demo.cpp file for the demo video's source code.
+#### Contact me: mas83674@uga.edu
+
+### About SmartGL
+> What the hell is this?
+SmartGL is at its core two things: (1) a collection of object-oriented wrappers around OpenGL objects designed to boost productivity and ease of programming while working with OpenGL, and (2) a graphics engine designed primarily with the goal of making video games. No one likes having to write acres of OpenGL API calls for the most simple tasks or carefully looking up OpenGL functions one at a time in the spec. My object-oriented wrappers were made to preserve all the fun and power of OpenGL programming while eliminating all the boring and tedious stuff. Some features include:
+- Classes for every type of commonly used texture with support for (pretty much) every data type.
+- Easy interface for loading shaders and creating programs.
+- Classes that provide an easy interface for setting a program's uniforms and keeping them all bundled in one place. In particular, uniform buffers with an std140 layout can be updated automatically without the user having to perform meticulous alignment calculations. This one was truly a game-changer for me.
+- My own math library. You can think of it as a slightly worse, less extensive version of the popular GLM library. But it's single-header and still gets the job done. (If you want to have nightmares tonight, go look at the source code for "util/GL-math.hpp"!)
+The graphics engine is what I spent the bulk of my time on, and includes the following features:
+- Loading of models from pretty much any format.
+- Support for animated and PBR models.
+- Custom model format that minimizes loading times.
+- Custom PBR shaders that are generated on the fly for any type of model that is being rendered.
+- Integration of background skyboxes into a PBR scene.
+- Overhead and point-light shadows.
+- Integration of Bullet physics.
+- A relatively easy-to-use interface.
+> Ok cool, but like, why would I ever use this? Why not just use Unity or something?
+Great question, my imaginary friend! Honestly, no reason -- you're most likely better off using Unity. This was just kind of a passion project for me. I personally like having full control over the GPU and I take pride in knowing that the games I develop are running off of code that is entirely my own. But if your goal is to maximize your game development productivity, probably go with a more well-established game engine. But just in case you would ever want to use a small, compact, quirky game engine made by a passionate developer, you now have the option to do so.
+> How can I learn more about the engine and how to use it?
+I want to add Doxygen comments to all my code eventually, but for now, there is no documentation. Your best bet is to look through the "demo.cpp" file and read the comments/ try to understand the code. It's pretty simple and probably covers most common use cases. If you have any additional pressing questions, you can email me (see top).
