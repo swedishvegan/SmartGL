@@ -1,8 +1,7 @@
 # SmartGL
 OpenGL made easy.
 
-#### Demo video:
-link here
+#### Demo video: https://youtu.be/zDuNxg4LJ18 (sorry for low-quality recording)
 #### For an example of how my engine is used, please read through the demo.cpp file for the demo video's source code.
 #### Contact me: mas83674@uga.edu
 
