@@ -3,7 +3,7 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 #define STBI_FAILURE_USERMSG
-#include "util/stb_image.h"
+#include "stb_image.h"
 #include "util/enums.hpp"
 
 namespace GL {
