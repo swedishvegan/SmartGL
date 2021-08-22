@@ -187,7 +187,6 @@ int main() {
 		int bg = 0;
 
 		double t = 0.0;
-		uint divisionIndex = 0u;
 
 		double timeCur = glfwGetTime();
 		double timeLast = timeCur;
@@ -248,7 +247,7 @@ int main() {
 			// Update the current scene's camera.
 
 			const float FOV = GL::radians(120.0f);
-			scenes[bg].updateCamera(bb[bg], camPos[bg], camPos[bg] + camDir, GL::vec3(0.0f, 1.0f, 0.0f), FOV);
+			scenes[bg].updateCamera(bb[bg], camPos[bg], camPos[bg] + camDir, up, FOV);
 
 			// Adjust the lighting settings for each scene.
 
