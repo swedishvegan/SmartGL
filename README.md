@@ -36,7 +36,7 @@ Including the library is easy enough, but you'll need to also include all of its
 
 Well that's a little rude, but sure. At the time of writing this, I'm a 20 year old college student going into his junior year. I've been coding and making games as a hobby since middle school, and now I'm a math/CS major. Programming is probably the most important thing in my life at the moment. I spend most of my free time programming and it allows me to express myself on a level that I would never be able to in everyday life. This project of mine has become an important part of my identity and I've poured my heart into this engine for the last eight months. I'm posting it here in the hopes that someone may find it useful one day or at the very least appreciate the work that I've put into it. I also love playing guitar, listening to music, playing Rocket League, and hiking.
 
-> Okay that was honestly really sappy. Also, why are you having a conversation with an imaginary person? Don't you have a life?
+> Okay cool. Also, why are you having a conversation with an imaginary person? Don't you have a life?
 
 No comment.
 
