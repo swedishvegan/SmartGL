@@ -1,0 +1,2 @@
+add_executable(platformer_demo platformer_demo.cpp)
+target_link_libraries(platformer_demo SmartGL glfw)

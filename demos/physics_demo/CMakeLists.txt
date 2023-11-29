@@ -1,0 +1,2 @@
+add_executable(physics_demo physics_demo.cpp)
+target_link_libraries(physics_demo SmartGL glfw)
