@@ -1,7 +1,6 @@
 #ifndef SMARTGL_HPP
 #define SMARTGL_HPP
 
-#define GLEW_STATIC
 #include <GL/glew.h>
 
 #include "Font/FontLoader.hpp"

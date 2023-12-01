@@ -109,7 +109,7 @@ float GL::Font::write(GL::Framebuffer* framebuffer, std::string message, GL::vec
 
 #define _GL_Font_write_moveCoordsDown() maxWidth = GL::max(maxWidth, coords.x - startX); coords = vec2(startX, coords.y - loader->getBounds().height);
 
-			if (mode == FontWrap::LETTER and coords.x + data.advance > wrapDistance) { _GL_Font_write_moveCoordsDown() }
+			if (mode == FontWrap::LETTER && coords.x + data.advance > wrapDistance) { _GL_Font_write_moveCoordsDown() }
 
 			if (shouldDraw && textures[idx]) {
 
@@ -147,7 +147,7 @@ int GL::Font::getNextLine(int cur, std::string s, float start, float limit) cons
 		uchar c = s[i];
 		auto data = loader->getGlyphInfo(c);
 
-		if (c == ' ' and start <= limit) next = i;
+		if (c == ' ' && start <= limit) next = i;
 		if (start > limit) return max(cur + 1, (next < 0) ? i - 1 : next + 1);
 
 		start += data.advance;

@@ -25,6 +25,12 @@ set(SmartGL_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/include;${GLEW_INCLUDE_DIRS};${BUL
 
 include_directories("${SmartGL_INCLUDE_DIRS};${GLFW_INCLUDE_DIRS};${ASSIMP_INCLUDE_DIRS};")
 
+if (WIN32)
+	set(OPENGL_LIB "opengl32")
+else()
+	set(OPENGL_LIB "GL")
+endif()
+
 subdirs(bin)
 subdirs(demos)
 

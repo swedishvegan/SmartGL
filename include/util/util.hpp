@@ -1,7 +1,6 @@
 #ifndef UTIL_HPP
 #define UTIL_HPP
 
-#define GLEW_STATIC
 #include <GL/glew.h>
 
 #include "./Exception.hpp"

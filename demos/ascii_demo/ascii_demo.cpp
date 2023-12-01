@@ -42,7 +42,7 @@ int main() {
 
 		GL::init(screenWidth, screenHeight);
 
-		GL::FontLoader font_loader("fonts/timesnewroman.ttf", 30, 169); // Load font from file (30 pt, 169 ppi)
+		GL::FontLoader font_loader(CUR_DIRECTORY "/fonts/timesnewroman.ttf", 30, 169); // Load font from file (30 pt, 169 ppi)
 		GL::Font font(font_loader);
 
 		FontConverter converter(font_loader, GL::uvec2(screenWidth / 2, screenHeight), 64, 6); // Used to convert a texture to ASCII
@@ -65,7 +65,7 @@ int main() {
 		GL::Framebuffer framebuffer_rh(screenWidth / 2, screenHeight);
 		framebuffer_rh.setColorTarget(render_target_rh);
 
-		GL_LoadProgramFrom(splitscreen, "shaders/");
+		GL_LoadProgramFrom(splitscreen, CUR_DIRECTORY "/shaders/");
 
 		GL::UniformTable splitscreen_unis(splitscreen);
 		splitscreen_unis.init(
@@ -78,7 +78,7 @@ int main() {
 
 		splitscreen_unis.update();
 
-		GL_loadCubeMapFromFile(background, "cubemaps/spacebox1.cubemap", 0u, GL::DataType::F16);
+		GL_loadCubeMapFromFile(background, CUR_DIRECTORY "/cubemaps/spacebox1.cubemap", 0u, GL::DataType::F16);
 
 		const float zNear = 1.0f;
 		const float zFar = 1000.0f;
@@ -89,15 +89,15 @@ int main() {
 		GL::Scene scene(GL::uvec2(screenWidth / 2, screenHeight), background, zNear, zFar, shadowSettings);
 		scene.setBackgroundBrightness(0.01);
 
-		GL::Model amongus("models/amongus.model");
+		GL::Model amongus(CUR_DIRECTORY "/models/amongus.model");
 		amongus.setModelMatrix(GL::translate(GL::vec3(0.0, -15.0, 0.0)) * GL::scale(GL::vec3(0.15f)));
 		amongus.setMetallicValue(0.6);
 		amongus.setRoughnessValue(0.3);
 
-		GL::Model monsterfish("models/monsterfish.model");
+		GL::Model monsterfish(CUR_DIRECTORY "/models/monsterfish.model");
 		monsterfish.setModelMatrix(GL::translate(GL::vec3(0.0, -25.0, -10.0)) * GL::scale(GL::vec3(0.4f)));
 
-		GL::Model penguin("models/penguin.model");
+		GL::Model penguin(CUR_DIRECTORY "/models/penguin.model");
 		penguin.setModelMatrix(
 			GL::translate(GL::vec3(20.0, -20.0, 0.0)) * 
 			GL::scale(GL::vec3(20.0f)) * 

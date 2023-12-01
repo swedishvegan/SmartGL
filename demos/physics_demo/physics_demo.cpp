@@ -49,7 +49,7 @@ int main() {
 		const GL::btVec3 gravity(0.0, -24.0, 0.0);
 		GL::PhysicsWorld world(gravity);
 
-		GL_loadCubeMapFromFile(background, "cubemaps/Spacebox3/spacebox3.cubemap", 0u, GL::DataType::F16);
+		GL_loadCubeMapFromFile(background, CUR_DIRECTORY "/cubemaps/Spacebox3/spacebox3.cubemap", 0u, GL::DataType::F16);
 
 		const float zNear = 1.0f;
 		const float zFar = 1000.0f;
@@ -59,7 +59,7 @@ int main() {
 
 		GL::Scene scene(background, zNear, zFar, shadowSettings);
 
-		GL::GeneralPurposePhysicsModel bowl("models/bowl.model", world, 0.3, 0.0, false, GL::btVec3(0.0, -20.0, 0.0));
+		GL::GeneralPurposePhysicsModel bowl(CUR_DIRECTORY "/models/bowl.model", world, 0.3, 0.0, false, GL::btVec3(0.0, -20.0, 0.0));
 
 		#define N 20
 		GL::PhysicsModel* physicsModels[3 * N];
@@ -74,9 +74,9 @@ int main() {
 			// internally keeps track of which models have already been loaded and shares resources when a second copy
 			// of the same model is loaded. Thus, this is the preferred way to use the same model multiple times.
 
-			physicsModels[idx] = new GL::ConvexHullPhysicsModel("models/ball.model", world, 0.05, 1.0, false, GL::btVec3(0.0, height, 0.0));
-			physicsModels[idx + 1] = new GL::ConvexHullPhysicsModel("models/egg.model", world, 0.02, 1.0, false, GL::btVec3(5.0, height + 5.0, 18.0));
-			physicsModels[idx + 2] = new GL::ConvexHullPhysicsModel("models/cone.model", world, 0.05, 1.0, false, GL::btVec3(-5.0, height + 10.0, 19.0));
+			physicsModels[idx] = new GL::ConvexHullPhysicsModel(CUR_DIRECTORY "/models/ball.model", world, 0.05, 1.0, false, GL::btVec3(0.0, height, 0.0));
+			physicsModels[idx + 1] = new GL::ConvexHullPhysicsModel(CUR_DIRECTORY "/models/egg.model", world, 0.02, 1.0, false, GL::btVec3(5.0, height + 5.0, 18.0));
+			physicsModels[idx + 2] = new GL::ConvexHullPhysicsModel(CUR_DIRECTORY "/models/cone.model", world, 0.05, 1.0, false, GL::btVec3(-5.0, height + 10.0, 19.0));
 
 			physicsModels[idx]->setColor(GL::vec3(5.0, 0.0, 0.0));
 			physicsModels[idx + 1]->setColor(GL::vec3(5.0, 5.0, 0.0));

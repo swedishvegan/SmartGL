@@ -62,15 +62,15 @@ int main() {
 		ModelShader customVertShader(ShaderType::VERTEX);
 		ModelShader customFragShader(ShaderType::FRAGMENT);
 
-		customVertShader.init("shaders/custom.vert", true);
-		customFragShader.init("shaders/custom.frag", true);
+		customVertShader.init(CUR_DIRECTORY "/shaders/custom.vert", true);
+		customFragShader.init(CUR_DIRECTORY "/shaders/custom.frag", true);
 
 		ModelProgram customProgram(customVertShader, customFragShader);
 		customProgram.addUniforms("skybox", UniformType::SAMPLER, 1);
 		customProgram.bindTextures(background.getCubeMap(), "skybox");
 
-		BoundingSpherePhysicsModel basic_sphere("models/basic_sphere.model", physicsWorld, 0.04, 2.0, false, sphereSpawnPoint);
-		GeneralPurposePhysicsModel basic_floor("models/basic_floor.model", physicsWorld, 0.08, 0.0, true);
+		BoundingSpherePhysicsModel basic_sphere(CUR_DIRECTORY "/models/basic_sphere.model", physicsWorld, 0.04, 2.0, false, sphereSpawnPoint);
+		GeneralPurposePhysicsModel basic_floor(CUR_DIRECTORY "/models/basic_floor.model", physicsWorld, 0.08, 0.0, true);
 		
 		basic_sphere.setColor(vec3(1.0f, 0.933f, 0.180f));
 		basic_sphere.getPhysicsObject().setAngularDamping(0.3);

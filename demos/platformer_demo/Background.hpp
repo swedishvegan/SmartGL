@@ -32,10 +32,10 @@ Background::Background(uint cubeMapDim, uint unit) : cubeMap(cubeMapDim, unit, C
 	if (!program) {
 
 		ShaderLoader vertShader(ShaderType::VERTEX);
-		vertShader.init("shaders/background.vert", true);
+		vertShader.init(CUR_DIRECTORY "/shaders/background.vert", true);
 
 		ShaderLoader fragShader(ShaderType::FRAGMENT);
-		fragShader.init("shaders/background.frag", true);
+		fragShader.init(CUR_DIRECTORY "/shaders/background.frag", true);
 
 		program = new Program();
 		program->init(vertShader, fragShader);

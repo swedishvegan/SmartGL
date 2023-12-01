@@ -30,7 +30,7 @@ protected: static const char* sourceCode;
 ProceduralMap::ProceduralMap(uint unit, const char* sourceCode, TextureFilter filterMode) : map(256, 256, 256, unit, ColorFormat::R, DataType::F16) {
 
 	ShaderLoader compShader(ShaderType::COMPUTE);
-	compShader.init("shaders/noise_renderer.comp", true, sourceCode, false);
+	compShader.init(CUR_DIRECTORY "/shaders/noise_renderer.comp", true, sourceCode, false);
 	program.init(compShader);
 	map.bindToImageUnit(0);
 	map.setMinFilter(filterMode);

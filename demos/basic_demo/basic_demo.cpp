@@ -46,7 +46,7 @@ int main() {
 		// You must call this init function before creating any other GL objects. Otherwise, an error is generated.
 		GL::init(screenWidth, screenHeight);
 
-		GL_loadCubeMapFromFile(background, "cubemaps/spacebox1.cubemap", 0u, GL::DataType::F16);
+		GL_loadCubeMapFromFile(background, CUR_DIRECTORY "/cubemaps/spacebox1.cubemap", 0u, GL::DataType::F16);
 
 		const float zNear = 1.0f;
 		const float zFar = 1000.0f;
@@ -56,15 +56,15 @@ int main() {
 
 		GL::Scene scene(background, zNear, zFar, shadowSettings);
 
-		GL::Model amongus("models/amongus.model");
+		GL::Model amongus(CUR_DIRECTORY "/models/amongus.model");
 		amongus.setModelMatrix(GL::translate(GL::vec3(0.0, -15.0, 0.0)) * GL::scale(GL::vec3(0.15f)));
 		amongus.setMetallicValue(0.6);
 		amongus.setRoughnessValue(0.3);
 
-		GL::Model monsterfish("models/monsterfish.model");
+		GL::Model monsterfish(CUR_DIRECTORY "/models/monsterfish.model");
 		monsterfish.setModelMatrix(GL::translate(GL::vec3(0.0, -25.0, -10.0)) * GL::scale(GL::vec3(0.4f)));
 
-		GL::Model penguin("models/penguin.model");
+		GL::Model penguin(CUR_DIRECTORY "/models/penguin.model");
 		penguin.setModelMatrix(
 			GL::translate(GL::vec3(20.0, -20.0, 0.0)) * 
 			GL::scale(GL::vec3(20.0f)) * 

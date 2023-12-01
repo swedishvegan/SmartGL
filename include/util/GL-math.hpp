@@ -154,9 +154,9 @@ namespace GL {
 	template <typename T>
 	T sign(T x) { return (x > (T)0) ? (T)1 : (x < (T)0) ? (T)-1 : (T)0; }
 	template <typename T>
-	T fract(T x) { return x - floor(x); }
+	T fract(T x) { return x - std::floor(x); }
 	template <typename T>
-	T mod(T x, T y) { return x - y * floor(x / y); }
+	T mod(T x, T y) { return x - y * std::floor(x / y); }
 	template <typename T>
 	T modf(T x, T& y) {
 		T m = mod(x, y);
