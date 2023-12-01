@@ -75,4 +75,13 @@ The platformer demo is a simple physics-based platformer framework that showcase
 
 The ASCII demo showcases loading text, and also features a fun little real-time ASCII renderer that can be used to draw a 3D scene entirely in ASCII.
 
-Have fun! :D
+## Using the SmartGL library <a name="pt2.4"></a>
+
+Linking your other C++ projects up with SmartGL is pretty easy if you're using CMake:
+
+```
+find_package(SmartGL REQUIRED)
+target_link_libraries([your target] SmartGL)
+```
+
+You might need to also include a window creation library. In the demos, I use GLFW for this. Feel free to look at how I did this in CMake, and copy it into your own build files.
