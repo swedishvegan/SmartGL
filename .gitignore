@@ -8,6 +8,8 @@
 !instructions.txt
 !*.cpp
 !*.hpp
+!*.c
+!*.h
 !*.vert
 !*.frag
 !*.comp
