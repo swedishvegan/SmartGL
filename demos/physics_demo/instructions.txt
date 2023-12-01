@@ -1,0 +1,10 @@
+
+Use arrow keys to look around.
+
+Hold down SPACE to apply anti-gravity to the objects.
+
+Hold down T to apply torque to the objects.
+
+Hold down P to pause movement.
+
+Press ESC to exit the program.

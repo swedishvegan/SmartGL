@@ -1,0 +1,4 @@
+
+Hold down P to pause movement.
+
+Press ESC to exit the program.

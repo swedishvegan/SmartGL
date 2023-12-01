@@ -5,7 +5,7 @@
 !BUILD.*
 !*/
 !CMakeLists.txt
-!INSTRUCTIONS.txt
+!instructions.txt
 !*.cpp
 !*.hpp
 !*.vert
@@ -17,4 +17,5 @@
 !*.ttf
 !.gitignore
 !install_dependencies.*
+!*.png
 CMakeFiles

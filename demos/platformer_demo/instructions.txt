@@ -1,0 +1,11 @@
+
+Use WASD to move.
+
+Hold down SPACE and release it to launce the marble up into the air.
+The ground is like a spring -- you have to pull it back and release it.
+
+Use arrow keys to look around.
+
+Press R to respawn if you fall off.
+
+Press ESC to exit the program.
