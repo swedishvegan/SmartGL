@@ -16,4 +16,5 @@
 !*.cubemap
 !*.ttf
 !.gitignore
+!install_dependencies.*
 CMakeFiles
