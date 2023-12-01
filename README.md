@@ -49,7 +49,7 @@ Once you have ```vcpkg``` installed, run the ```install_dependencies.bat``` file
 
 Once dependencies are installed, go ahead and generate the build files with CMake: &nbsp; ```cmake . -DCMAKE_TOOLCHAIN_FILE="[path to vcpkg.exe on your machine]/scripts/buildsystems/vcpkg.cmake"```
 
-If all went well, CMake should have generated a ```SmartGL.sln``` build file. Go ahead and open this file in Visual Studio and build the project.
+If all went well, CMake should have generated a ```SmartGL.sln``` build file. Go ahead and open this file in Visual Studio and build the project in Release mode. (I don't think the linker is configured to work with certain libraries in debug mode right now, but you can try.)
 
 ## Building on Linux <a name="pt2.2"></a>
 
