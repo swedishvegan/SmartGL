@@ -53,7 +53,7 @@ If all went well, CMake should have generated a ```SmartGL.sln``` build file. Go
 
 ## Building on Linux <a name="pt2.2"></a>
 
-If you're using Ubuntu/Debian, you can just use ```apt-get``` to install all the dependencies. Otherwise, you might need to use a different package manager or manually install the dependencies. If you have ```apt-get``` then go ahead and run the shell script: &nbsp; ```chmod a+rwx install_dependencies.sh```
+If you're using Ubuntu/Debian, you can just use ```apt-get``` to install all the dependencies. Otherwise, you might need to use a different package manager or manually install the dependencies. If you have ```apt-get``` then go ahead and run the shell script: &nbsp; ```install_dependencies.sh```
 
 You might need to edit permissions on the file first: &nbsp; ```chmod a+rwx install_dependencies.sh```
 
